@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>three chars</title>
+</head>
+<body>
+<script type="text/javascript">
+	function generateCombinations() {
+	  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+	  const combinations = [];
+
+	  for (let i = 0; i < characters.length; i++) {
+	    for (let j = 0; j < characters.length; j++) {
+	      for (let k = 0; k < characters.length; k++) {
+	        const combination = characters[i] + characters[j] + characters[k];
+	        combinations.push(combination);
+	      }
+	    }
+	  }
+
+	  return combinations;
+	}
+
+	function generateTwoCharsCombinations() {
+		const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+		  const combinations = [];
+
+		  for (let i = 0; i < characters.length; i++) {
+		    for (let j = 0; j < characters.length; j++) {
+		      const combination = characters[i] + characters[j];
+		      combinations.push(combination);
+		    }
+		  }
+
+		  return combinations;
+	}
+
+
+const allCombinations = generateTwoCharsCombinations();
+console.log(allCombinations.length)
+console.log(allCombinations[100])
+</script>
+</body>
+</html>
